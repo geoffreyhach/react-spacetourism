@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import PageImg from "../components/pageImg";
 
 class CrewPage extends Component {
     state = {
@@ -15,19 +16,6 @@ class CrewPage extends Component {
         this.setState({ currentMember: member });
     }
 
-    getMemberImg() {
-        let url = "/assets/crew/image-douglas-hurley.png";
-        if (this.state.currentMember === "Douglas Hurley")
-            url = "/assets/crew/image-douglas-hurley.png";
-        if (this.state.currentMember === "Mark Shuttleworth")
-            url = "/assets/crew/image-mark-shuttleworth.png";
-        if (this.state.currentMember === "Victor Glover")
-            url = "/assets/crew/image-victor-glover.webp";
-        if (this.state.currentMember === "Anousheh Ansari")
-            url = "/assets/crew/image-anousheh-ansari.webp";
-        return url;
-    }
-
     render() {
         const divStyle = {
             marginTop: "1rem",
@@ -40,13 +28,9 @@ class CrewPage extends Component {
                 <p className="numbered-titles text-white ff-sans-cond letter-spacing-2 uppercase fs-500">
                     <span>02</span>Meet your crew
                 </p>
-                <picture>
-                    <img
-                        className="crew-img"
-                        src={this.getMemberImg()}
-                        alt="Douglas Hurley"
-                    />
-                </picture>
+
+                <PageImg page="crew" item={this.state.currentMember} />
+
                 <div className="dots flex" style={divStyle}>
                     <NavLink
                         to="douglas"

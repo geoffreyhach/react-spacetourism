@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import PageImg from "../components/pageImg";
 
 class TechnologyPage extends Component {
     state = {
@@ -15,14 +16,9 @@ class TechnologyPage extends Component {
     }
 
     getPageImg() {
-        let url = "/assets/technology/image-launch-vehicle-landscape.jpg";
-        if (this.state.currentPage === "vehicle")
-            url = "/assets/technology/image-launch-vehicle-landscape.jpg";
-        if (this.state.currentPage === "spaceport")
-            url = "/assets/technology/image-spaceport-landscape.jpg";
-        if (this.state.currentPage === "capsule")
-            url = "/assets/technology/image-space-capsule-landscape.jpg";
-        return url;
+        if (this.state.currentPage === "vehicle") return "Launch vehicle";
+        if (this.state.currentPage === "spaceport") return "Spaceport";
+        if (this.state.currentPage === "capsule") return "Space capsule";
     }
     render() {
         return (
@@ -30,9 +26,9 @@ class TechnologyPage extends Component {
                 <p className="numbered-titles text-white ff-sans-cond letter-spacing-2 uppercase fs-500">
                     <span>03</span>Space Launch 101
                 </p>
-                <picture>
-                    <img src={this.getPageImg()} alt="" />
-                </picture>
+
+                <PageImg page="technology" item={this.getPageImg()} />
+
                 <ul className="slider-numbers">
                     <li>
                         <NavLink

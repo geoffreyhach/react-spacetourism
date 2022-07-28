@@ -112,7 +112,7 @@ select {
 .fs-500 { font-size: 1.25rem;}
 .fs-600 { font-size: clamp(.6rem, 2vw + 1rem, 1.7rem);}
 .fs-700 { font-size: 3.5rem;}
-.fs-800 { font-size: 6.25rem}
+.fs-800 { font-size: 5rem}
 .fs-900 { font-size: clamp(5rem, 10vw + 1rem, 9.375rem);}
 
 @media (min-width: 35em) {
@@ -238,7 +238,7 @@ p {
   align-items: center;
   text-align: center;
   justify-items:  center;
-  gap: 2rem;
+  gap: 3rem;
   padding-top: 1rem;
 
 
@@ -246,36 +246,37 @@ p {
 
 @media (min-width : 35em) {
   .home {
-      background-image: url(/public/assets/home/background-home-tablet.jpg);
-      background-repeat : no-repeat;
-      background-position: center right; 
-      background-size: cover;   
+    background-image: url(/public/assets/home/background-home-tablet.jpg);
+    background-repeat : no-repeat;
+    background-position: center right; 
+    background-size: cover;   
   }
   
   .container--home {
-      align-items: center;
-      text-align: center;
-      justify-content: space-around;
-      gap : 3rem;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    gap : 3rem;
+    padding-top : 4rem;
   }
   
 }
 
 @media (min-width : 45em) {
   .home {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      gap : min(30vh, 1rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap : min(30vh, 1rem);
 
-      background-image: url(/public/assets/home/background-home-desktop.jpg);
-      background-repeat : no-repeat;
-      background-position: center right;  
+    background-image: url(/public/assets/home/background-home-desktop.jpg);
+    background-repeat : no-repeat;
+    background-position: center right;  
   }
   
   .container--home {
-      grid-template-columns: 1fr 1fr;
-      padding-top: 40vh;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 40vh;
   }
 }
 
@@ -285,105 +286,104 @@ p {
 
 }
 
-
 .container--destination picture {
-  max-width: 50%;
+  max-width: 70%;
 }
 
 @media (min-width : 35em) {
   .container--destination .numbered-titles {
-      display: block;
-      padding-top: 2rem;
-      justify-self: start;
-      grid-area: numtitle;
+    display: block;
+    padding-top: 2rem;
+    justify-self: start;
+    grid-area: numtitle;
   }
 
   .container--destination {
-      grid-template-areas:
-      " numtitle"
-      " image "
-      " tabs "
-      " article "
-      ;
+    grid-template-areas:
+    " numtitle"
+    " image "
+    " tabs "
+    " article "
+    ;
   }
 
   .container--destination picture {
-      max-width: 50%;
-      grid-area: image;
+    grid-area: image;
   }
 
       
   .container--destination .planet-name {
-      grid-area : title;
+    grid-area : title;
   }
 
-      
   .container--destination .planet-infos {
-      grid-area : text;
+    grid-area : text;
   }
   
   .container--destination .tabs {
-      grid-area : tabs;
+    grid-area : tabs;
   }
 
   .container--destination .divider {
-      grid-area: divider;
+    grid-area: divider;
   }
 
   .container--destination .distance {
-      grid-area: distance;
+    grid-area: distance;
   }
 
   .container--destination .travel {
-      grid-area: travel;
+    grid-area: travel;
   }
 
   .container--destination article {
-      --flow-gap: 1.2rem;
-      display: grid;
-      grid-template-areas: 
-      " title title "
-      " text text "
-      " divider divider"
-      " distance travel";
-      grid-area: article;
+    --flow-gap: 1.2rem;
+    display: grid;
+    grid-template-areas: 
+    " title title "
+    " text text "
+    " divider divider"
+    " distance travel";
+    grid-area: article;
   }
   
 }
 
 @media (min-width : 45em){
   .container--destination {
-      grid-template-columns: 50% 50%;
-      grid-template-areas:
-      " numtitle ."
-      " image tabs "
-      " image article";
-      align-items: top;
-      column-gap : 2rem;
-      text-align: start;
-      justify-content: left;
-      margin-inline: 2rem;
-
-      padding-top: 2rem;
-
-
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    " numtitle ."
+    " image tabs "
+    " image article";
+    align-items: top;
+    column-gap : 2rem;
+    text-align: start;
   }
 
+
   .container--destination picture {
-      max-width: 90%;
+    max-width: 90%;
   }
 
   .container--destination .tabs {
-      justify-self: left;
-      padding-top: 0rem;
+    justify-self: left;
+    padding-top: 0rem;
+  }
+  .container--destination article {
+    justify-self: left;
+  }
+
+  .planet-infos {
+    max-width: 65ch;
   }
 
   .container--destination ul {
-      margin-top: 0rem;
+    margin-top: 0rem;
   }
 
   .container--destination .divider {
-      justify-self: start;
+    justify-self: start;
   }
 }
 
@@ -393,10 +393,9 @@ p {
   justify-items: center;
 }
 
+.container--crew picture {
+  max-width: 50%;
 
-.crew-img {
-  max-height: 30vh;
-  border-bottom: 1px solid hsl(var(--color-white), .3);
 }
 
 .container--crew .role {
@@ -405,28 +404,28 @@ p {
 
 @media (min-width:35em) {
   .container--crew {
-      grid-template-areas: 
-      "title"
-      "article"
-      "dots"
-      "image";
-      padding-bottom: 0;
-      padding-top: 2rem;
-      margin-inline: 2rem;
+    position: relative;
+    grid-template-areas: 
+    "title"
+    "article"
+    "dots"
+    "image";
+    padding-bottom: 0;
 
   }
 
-  .container--crew picture {
-      grid-area : image;
-      margin-inline: auto;
-      max-height: 60vh;
-      margin-bottom:0;
+  .container--crew picture{
+    grid-area : image;
+    margin-inline: auto; 
+
+    margin-bottom:0;
+
   }
 
   .container--crew .numbered-titles {
     padding-top: 2rem;
-      grid-area : title;
-      justify-self: start;
+    grid-area : title;
+    justify-self: start;
   }
 
   .container--crew .dots {
@@ -434,37 +433,35 @@ p {
   }
 
   .container--crew .crew-article {
-      grid-area : article;
-      max-width: 50ch;
+    grid-area : article;
+    max-width: 50ch;
   }
 }
 
 @media (min-width:45em) {
   .container--crew {
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: 
-      "title image"
-      "article image"
-      "dots image";
-      row-gap: 10rem;
-      text-align: left;
-      align-items: center;
-      justify-items: start;
-
-      /* border: 1px solid red; */
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "title ."
+    "article image"
+    "dots image";
+    row-gap: 5rem;
+    text-align: left;
+    align-items: center;
+    justify-items: start;
+    overflow: hidden;
   }
-  /* .container--crew > * {
-      border: 1px solid green;
-  } */
-
   .container--crew picture {
-      grid-area : image;
-      margin-bottom:unset;
+    /* position: absolute; */
+    /* max-width: 30vw; */
+    height: 60vh;
+    grid-area : image;
   }
 
   .crew-img {
-      min-height: 60vh;
-      max-height: 60vh;
+    width: 100%;
+    height : auto;
   }
   
 }
@@ -483,6 +480,52 @@ align-items: center;
   object-fit: fill;
   /* min-width: 100vw; */
 }
+
+
+@media (min-width:35em) {
+  .container--technology {
+    padding-top: 2rem;
+  }
+  .container--technology .numbered-titles {
+    text-align: left;
+  }
+}
+@media (min-width:45em) {
+.container--technology {
+  position: relative;
+  grid-template-columns: 3rem 1fr 1fr;
+  grid-template-areas: 
+  "title title ."
+  "slider article image";
+  column-gap: 3rem;
+  text-align: left;
+  align-items: center;
+  justify-items: start;
+  /* overflow: hidden; */
+  }
+  .container--technology .numbered-titles {
+    grid-area : title;
+  }
+  .container--technology .slider-numbers {
+    grid-area : slider;
+    flex-direction: column;
+  }
+  .container--technology article {
+    grid-area : article;
+  }
+  .container--technology article *{
+    text-align: left;
+
+  }
+  .container--technology picture {
+    grid-area : image;
+  }
+
+
+  }
+    
+
+
 
 
 /* ===========
@@ -564,68 +607,67 @@ align-items: center;
   }
 
   .navbar { 
-      flex-direction: row;
-      justify-content: space-between;
-      height: auto;
-      margin: auto;
-      background-color: hsl(var(--color-white), .05);
-      padding: 2rem 2rem 2rem;
-      backdrop-filter: none;
-      gap : unset;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    margin: auto;
+    background-color: hsl(var(--color-white), .05);
+    padding: 2rem 2rem 2rem;
+    backdrop-filter: none;
+    gap : unset;
 
   }
 
   .navbar a {
-      padding-bottom: 2rem;
+    padding-bottom: 2rem;
   }
 
   .navbar .active {
-      display: inline;
-      border-bottom: 3px solid white!important;
-      border-right : none;
+    display: inline;
+    border-bottom: 3px solid white!important;
+    border-right : none;
   }
   
   .navbar-toggle {
-      display: none;
+    display: none;
   }
 
   li span {
-      display: none;
+    display: none;
   }
   
 }
 
 @media (min-width: 45em) {
   .primary-navigation {
-      transform: none;
-      width : 80vw;
-  
+    transform: none;
+    width : 80vw;
+
   }
   .navbar { 
-      white-space: nowrap;
-      flex-direction: row;
-      justify-content: space-between;
-      height: auto;
-      margin: auto;
-      background-color: hsl(var(--color-white), .05);
-      backdrop-filter: blur(60px);
-      padding: 2rem 3rem 3rem;
+    white-space: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    margin: auto;
+    background-color: hsl(var(--color-white), .05);
+    backdrop-filter: blur(60px);
+    padding: 2rem 3rem 3rem;
 
   }
   .navbar a {
-      padding-bottom: 2rem;
-      /* outline : 1px solid red; */
+    padding-bottom: 2rem;
+    /* outline : 1px solid red; */
   }
 
   .navbar a:hover,
   .navbar .hover {
-          border-bottom: 3px solid hsl(var(--color-light), .3);
-          border-right : none;
-      
+        border-bottom: 3px solid hsl(var(--color-light), .3);
+        border-right : none;
   }  
 
   li span {
-      display: inline-block;
+    display: inline-block;
   }
 
 }

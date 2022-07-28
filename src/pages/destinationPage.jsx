@@ -1,5 +1,6 @@
-import React, { Component, useEffect } from "react";
+import React, { Component } from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import PageImg from "../components/pageImg";
 
 class Destination extends Component {
     state = {
@@ -10,27 +11,15 @@ class Destination extends Component {
         this.setState({ currentPlanet: planet });
     }
 
-    getPlanetImg() {
-        let url = "/assets/destination/image-moon.webp";
-        if (this.state.currentPlanet == "mars")
-            url = "/assets/destination/image-mars.webp";
-        if (this.state.currentPlanet == "europa")
-            url = "/assets/destination/image-europa.webp";
-        if (this.state.currentPlanet == "titan")
-            url = "/assets/destination/image-titan.webp";
-
-        return url;
-    }
-
     render() {
         return (
             <main className="container container--destination grid flow">
                 <p className="numbered-titles text-white ff-sans-cond letter-spacing-2 uppercase fs-500">
                     <span>01</span>Pick your destination
                 </p>
-                <picture>
-                    <img src={this.getPlanetImg()} alt="image of the planet" />
-                </picture>
+
+                <PageImg page="destinations" item={this.state.currentPlanet} />
+
                 <ul className="tabs flex fs-300 ff-sans-cond letter-spacing-3 uppercase">
                     <li>
                         <NavLink
