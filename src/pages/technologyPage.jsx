@@ -6,6 +6,7 @@ class TechnologyPage extends Component {
     state = {
         currentPage: "vehicle",
     };
+    
     componentDidMount() {
         document.querySelector("body").removeAttribute("class");
         document.querySelector("body").classList.add("technology");
