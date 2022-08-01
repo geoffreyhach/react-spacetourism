@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/react-spacetourism/static/css/main.12a3f9a3.css",
-    "main.js": "/react-spacetourism/static/js/main.88748935.js",
-    "static/js/787.907a2fd7.chunk.js": "/react-spacetourism/static/js/787.907a2fd7.chunk.js",
-    "static/media/background-home-desktop.jpg": "/react-spacetourism/static/media/background-home-desktop.cdf3864ecbfdf20e8c3b.jpg",
-    "static/media/background-destination-desktop.jpg": "/react-spacetourism/static/media/background-destination-desktop.468b922c69bf5499b4bc.jpg",
-    "static/media/background-home-tablet.jpg": "/react-spacetourism/static/media/background-home-tablet.bc9efcc3281fa6801077.jpg",
-    "static/media/background-crew-desktop.jpg": "/react-spacetourism/static/media/background-crew-desktop.88a3c692fd34eb311e04.jpg",
-    "static/media/background-destination-tablet.jpg": "/react-spacetourism/static/media/background-destination-tablet.8f55d346d8b6cfd95ab7.jpg",
-    "static/media/background-technology-desktop.jpg": "/react-spacetourism/static/media/background-technology-desktop.b7b589b3c0c5ef0811d4.jpg",
-    "static/media/background-crew-tablet.jpg": "/react-spacetourism/static/media/background-crew-tablet.16d51cf61e98ce45eb61.jpg",
-    "static/media/background-home-mobile.jpg": "/react-spacetourism/static/media/background-home-mobile.13f7adecbcb3c3f170d8.jpg",
-    "static/media/background-technology-tablet.jpg": "/react-spacetourism/static/media/background-technology-tablet.48c38b028217ee0096c4.jpg",
-    "static/media/background-destination-mobile.jpg": "/react-spacetourism/static/media/background-destination-mobile.e0131e27e751ead1a922.jpg",
-    "index.html": "/react-spacetourism/index.html",
-    "static/media/logo.svg": "/react-spacetourism/static/media/logo.565f7f2c0534403f11b7.svg",
-    "static/media/icon-close.svg": "/react-spacetourism/static/media/icon-close.d47fda63cbd8b3fedbbc.svg",
-    "static/media/icon-hamburger.svg": "/react-spacetourism/static/media/icon-hamburger.5273efa7c50e96ef3e51.svg",
-    "main.12a3f9a3.css.map": "/react-spacetourism/static/css/main.12a3f9a3.css.map",
-    "main.88748935.js.map": "/react-spacetourism/static/js/main.88748935.js.map",
-    "787.907a2fd7.chunk.js.map": "/react-spacetourism/static/js/787.907a2fd7.chunk.js.map"
+    "main.css": "./static/css/main.95acca18.css",
+    "main.js": "./static/js/main.0459e275.js",
+    "static/js/787.907a2fd7.chunk.js": "./static/js/787.907a2fd7.chunk.js",
+    "static/media/background-home-desktop.jpg": "./static/media/background-home-desktop.cdf3864ecbfdf20e8c3b.jpg",
+    "static/media/background-destination-desktop.jpg": "./static/media/background-destination-desktop.468b922c69bf5499b4bc.jpg",
+    "static/media/background-home-tablet.jpg": "./static/media/background-home-tablet.bc9efcc3281fa6801077.jpg",
+    "static/media/background-crew-desktop.jpg": "./static/media/background-crew-desktop.88a3c692fd34eb311e04.jpg",
+    "static/media/background-destination-tablet.jpg": "./static/media/background-destination-tablet.8f55d346d8b6cfd95ab7.jpg",
+    "static/media/background-technology-desktop.jpg": "./static/media/background-technology-desktop.b7b589b3c0c5ef0811d4.jpg",
+    "static/media/background-crew-tablet.jpg": "./static/media/background-crew-tablet.16d51cf61e98ce45eb61.jpg",
+    "static/media/background-home-mobile.jpg": "./static/media/background-home-mobile.13f7adecbcb3c3f170d8.jpg",
+    "static/media/background-technology-tablet.jpg": "./static/media/background-technology-tablet.48c38b028217ee0096c4.jpg",
+    "static/media/background-destination-mobile.jpg": "./static/media/background-destination-mobile.e0131e27e751ead1a922.jpg",
+    "index.html": "./index.html",
+    "static/media/logo.svg": "./static/media/logo.565f7f2c0534403f11b7.svg",
+    "static/media/icon-close.svg": "./static/media/icon-close.d47fda63cbd8b3fedbbc.svg",
+    "static/media/icon-hamburger.svg": "./static/media/icon-hamburger.5273efa7c50e96ef3e51.svg",
+    "main.95acca18.css.map": "./static/css/main.95acca18.css.map",
+    "main.0459e275.js.map": "./static/js/main.0459e275.js.map",
+    "787.907a2fd7.chunk.js.map": "./static/js/787.907a2fd7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.12a3f9a3.css",
-    "static/js/main.88748935.js"
+    "static/css/main.95acca18.css",
+    "static/js/main.0459e275.js"
   ]
 }
