@@ -5,27 +5,33 @@ import data from "../data.json";
 
 const PageImg = (props) => {
     const getSmallImg = () => {
-        // let url;
+        let src = process.env.PUBLIC_URL;
+        let url = "";
 
         if (props.page === "technology")
-            return data[props.page].filter((res) => res.name === props.item)[0]
+            url = data[props.page].filter((res) => res.name === props.item)[0]
                 .images["landscape"];
         else
-            return data[props.page].filter(
+            url = data[props.page].filter(
                 (res) => res.name.toLowerCase() === props.item.toLowerCase()
             )[0].images.webp;
+        src += url;
+        return src;
     };
 
     const getBigImg = () => {
-        // let url;
+        let src = process.env.PUBLIC_URL;
+        let url = "";
 
         if (props.page === "technology")
-            return data[props.page].filter((res) => res.name === props.item)[0]
+            url = data[props.page].filter((res) => res.name === props.item)[0]
                 .images["portrait"];
         else
-            return data[props.page].filter(
+            url = data[props.page].filter(
                 (res) => res.name.toLowerCase() === props.item.toLowerCase()
             )[0].images.png;
+        src += url;
+        return src;
     };
 
     const getImgClass = () => {

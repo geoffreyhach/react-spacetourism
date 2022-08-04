@@ -2,11 +2,6 @@ import React, { Component } from "react";
 import data from "../data.json";
 
 class PlanetArticle extends Component {
-    componentDidMount() {
-        document.querySelector("body").removeAttribute("class");
-        document.querySelector("body").classList.add("destination");
-    }
-
     render() {
         const planetData = data.destinations.filter(
             (res) => res.name.toLowerCase() === this.props.planet

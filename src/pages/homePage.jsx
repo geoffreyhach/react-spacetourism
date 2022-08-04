@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { handleBackgroundImage } from "../utils/backgroundImage";
+
 class HomePage extends Component {
     componentDidMount() {
-        document.querySelector("body").removeAttribute("class");
-        document.querySelector("body").classList.add("home");
+        handleBackgroundImage("home");
     }
     render() {
         return (
-            <main className="container container--home grid">
+            <main className="container container--home grid flow">
                 <div>
                     <h1>
                         <p className="text-light ff-sans-cond letter-spacing-2 fs-600 uppercase">
@@ -18,7 +19,7 @@ class HomePage extends Component {
                         </p>
                     </h1>
                     <p
-                        className="text-light ff-sans fs-400 letter-spacing-2 big-lh"
+                        className="text-light ff-sans fs-400 letter-spacing-2 big-lh auto-marg"
                         style={{ maxWidth: "50ch" }}
                     >
                         Let’s face it; if you want to go to space, you might as
@@ -28,7 +29,7 @@ class HomePage extends Component {
                     </p>
                 </div>
                 <div>
-                    <Link to="destination/moon">
+                    <Link to="/destination/moon">
                         <button className="large-btn bg-white text-black fs-600 ff-serif letter-spacing-2 uppercase">
                             explore
                         </button>

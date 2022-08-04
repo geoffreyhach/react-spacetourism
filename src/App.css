@@ -10,6 +10,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
 
+
+
 /* ===========
   RESET
  ============ */
@@ -89,6 +91,18 @@ select {
 
 .container {
   padding-inline: 6rem;
+  max-width: 140rem;
+  margin: auto;
+}
+
+.auto-marg {
+  margin: auto;
+}
+
+@media (min-width:45em) {
+  .container{
+    padding-inline: clamp(6rem, 10vw, 30rem);
+  }
 }
 
 .flow > * {margin-bottom: var(--flow-gap, 1rem)}
@@ -235,12 +249,13 @@ p {
 }
 
 .container--home {
+  --flow-gap: 4rem;
   align-items: center;
   text-align: center;
   justify-items:  center;
-  gap: 3rem;
   padding-top: 1rem;
-
+  padding-inline: unset;
+  max-width: 90vw;
 
 }
 
@@ -281,8 +296,9 @@ p {
 }
 
 .container--destination {
-  text-align: center;
   justify-items: center;
+  justify-content: center;
+  text-align: center;
 
 }
 
@@ -293,7 +309,6 @@ p {
 @media (min-width : 35em) {
   .container--destination .numbered-titles {
     display: block;
-    padding-top: 2rem;
     justify-self: start;
     grid-area: numtitle;
   }
@@ -309,6 +324,7 @@ p {
 
   .container--destination picture {
     grid-area: image;
+    
   }
 
       
@@ -318,10 +334,12 @@ p {
 
   .container--destination .planet-infos {
     grid-area : text;
+
   }
   
   .container--destination .tabs {
     grid-area : tabs;
+    
   }
 
   .container--destination .divider {
@@ -356,7 +374,6 @@ p {
     " numtitle ."
     " image tabs "
     " image article";
-    align-items: top;
     column-gap : 2rem;
     text-align: start;
   }
@@ -368,14 +385,16 @@ p {
 
   .container--destination .tabs {
     justify-self: left;
-    padding-top: 0rem;
+    padding-left: 5rem;
   }
   .container--destination article {
     justify-self: left;
+    padding-left: 5rem;
   }
 
   .planet-infos {
     max-width: 65ch;
+    
   }
 
   .container--destination ul {
@@ -384,6 +403,7 @@ p {
 
   .container--destination .divider {
     justify-self: start;
+    padding-left: 5rem;
   }
 }
 
@@ -394,7 +414,7 @@ p {
 }
 
 .container--crew picture {
-  max-width: 50%;
+  max-width: 70%;
 
 }
 
@@ -423,7 +443,6 @@ p {
   }
 
   .container--crew .numbered-titles {
-    padding-top: 2rem;
     grid-area : title;
     justify-self: start;
   }
@@ -468,7 +487,11 @@ p {
 
 .container--technology {
   --flow-gap: 1rem;
-align-items: center;
+  align-items: center;
+  overflow: visible;
+  margin: auto;
+  justify-content: center;
+
 } 
 
 .container--technology p {
@@ -477,48 +500,69 @@ align-items: center;
 }
 
 .container--technology picture {
-  object-fit: fill;
-  /* min-width: 100vw; */
+  width:110vw
+}
+
+.container--technology article {
+  margin: auto;
+  max-width: 70vw;
 }
 
 
 @media (min-width:35em) {
-  .container--technology {
+  /* .container--technology {
     padding-top: 2rem;
-  }
+  } */
   .container--technology .numbered-titles {
     text-align: left;
+    margin-left: 7rem;
+  }
+
+  .container--technology picture {
+    width:110vw;
+  }
+
+  .container--technology img {
+    width:100%;
+  }
+  
+  .container--technology article {
+    margin: auto;
+    max-width: 70vw;
   }
 }
 @media (min-width:45em) {
-.container--technology {
-  position: relative;
-  grid-template-columns: 3rem 1fr 1fr;
-  grid-template-areas: 
-  "title title ."
-  "slider article image";
-  column-gap: 3rem;
-  text-align: left;
-  align-items: center;
-  justify-items: start;
-  /* overflow: hidden; */
-  }
-  .container--technology .numbered-titles {
-    grid-area : title;
-  }
-  .container--technology .slider-numbers {
-    grid-area : slider;
-    flex-direction: column;
-  }
-  .container--technology article {
-    grid-area : article;
-  }
-  .container--technology article *{
+  .container--technology {
+    position: relative;
+    grid-template-columns: 3rem 1fr 1fr;
+    grid-template-areas: 
+    "title title ."
+    "slider article image";
+    column-gap: 3rem;
+    padding-top: 0rem;
     text-align: left;
+    align-items: center;
+    justify-items: start;
+    /* overflow: hidden; */
+    }
+    .container--technology .numbered-titles {
+      grid-area : title;
+      padding-top: max(2rem, 10vh);
+    }
+    .container--technology .slider-numbers {
+      grid-area : slider;
+      flex-direction: column;
+    }
+    .container--technology article {
+      grid-area : article;
+    }
+    .container--technology article *{
+      text-align: left;
 
   }
   .container--technology picture {
     grid-area : image;
+    max-width: 30vw;
   }
 
 
@@ -674,6 +718,12 @@ align-items: center;
 
 .numbered-titles {
   padding-bottom: 2rem;
+}
+
+@media (min-width : 45em) {
+  .numbered-titles {
+    padding-top: max(2rem, 10vh)
+  }
 }
 
 .numbered-titles span {

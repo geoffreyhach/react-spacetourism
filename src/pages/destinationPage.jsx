@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import PageImg from "../components/pageImg";
+import { handleBackgroundImage } from "../utils/backgroundImage";
 
 class Destination extends Component {
     state = {
         currentPlanet: "moon",
     };
+
+    componentDidMount() {
+        handleBackgroundImage("destination");
+    }
 
     getCurrentPlanet(planet) {
         this.setState({ currentPlanet: planet });

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import PageImg from "../components/pageImg";
+import { handleBackgroundImage } from "../utils/backgroundImage";
 
 class CrewPage extends Component {
     state = {
@@ -8,8 +9,7 @@ class CrewPage extends Component {
     };
 
     componentDidMount() {
-        document.querySelector("body").removeAttribute("class");
-        document.querySelector("body").classList.add("crew");
+        handleBackgroundImage("crew");
     }
 
     getCurrentMember(member) {
