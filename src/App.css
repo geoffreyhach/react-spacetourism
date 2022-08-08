@@ -553,6 +553,7 @@ p {
     .container--technology .numbered-titles {
       grid-area : title;
       padding-top: max(2rem, 10vh);
+      margin-left: unset;
     }
     .container--technology .slider-numbers {
       grid-area : slider;
