@@ -304,6 +304,7 @@ p {
 
 .container--destination picture {
   max-width: 70%;
+  height: 13rem;
 }
 
 @media (min-width : 35em) {
@@ -407,6 +408,7 @@ p {
   }
 }
 
+
 .container--crew {
   --flow-gap : .8rem;
   text-align: center;
@@ -436,10 +438,8 @@ p {
 
   .container--crew picture{
     grid-area : image;
-    margin-inline: auto; 
-
-    margin-bottom:0;
-
+    margin: 3rem auto 0;
+    
   }
 
   .container--crew .numbered-titles {
@@ -454,6 +454,7 @@ p {
   .container--crew .crew-article {
     grid-area : article;
     max-width: 50ch;
+    height: 12rem;
   }
 }
 
@@ -476,6 +477,10 @@ p {
     /* max-width: 30vw; */
     height: 60vh;
     grid-area : image;
+  }
+
+  .container--crew .crew-article {
+    max-height: 12rem;
   }
 
   .crew-img {
@@ -683,6 +688,10 @@ p {
 }
 
 @media (min-width: 45em) {
+
+  header {
+    margin-top: 2rem;
+  }
   .primary-navigation {
     transform: none;
     width : 80vw;
@@ -692,11 +701,9 @@ p {
     white-space: nowrap;
     flex-direction: row;
     justify-content: space-between;
-    height: auto;
-    margin: auto;
     background-color: hsl(var(--color-white), .05);
     backdrop-filter: blur(60px);
-    padding: 2rem 3rem 3rem;
+    padding: 2rem 3rem 3rem; 
 
   }
   .navbar a {
